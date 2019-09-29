@@ -1,15 +1,23 @@
+
+const borderRadius = "3px"
+
 const listItem: React.CSSProperties = {
-    padding: "2px",
+    padding: "5px",
 }
 
-const optionsContainer: React.CSSProperties = {
-    border: "1px solid grey",
-    cursor: "pointer"
+const optionsContainer = (visible: boolean): React.CSSProperties => {
+    return {
+        border: "1px solid lightgrey",
+        borderRadius,
+        cursor: "pointer",
+        display: `${visible? "block" : "none"}`
+    }
 }
 
 const input: React.CSSProperties = {
     border: "1px solid lightgrey",
-    borderRadius: "3px"
+    borderRadius,
+    cursor: "pointer",
 }
 
-export {listItem, optionsContainer, input}
+export { listItem, optionsContainer, input }

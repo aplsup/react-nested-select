@@ -22,21 +22,26 @@ const options: SelectOption[] = [
   }
 ]
 
-const App = (): React.ReactElement => {
+interface AppProps {
+  value? : string;
+}
 
-  const [value, setValue] = React.useState("");
+const App = ({value}: AppProps): React.ReactElement => {
+
+  const [stateValue, setValue] = React.useState(value);
   console.log("Value", value);
 
   return (
     <div style={{width: "200px"}}>
-      <NestedSelect value={value}
+      <NestedSelect value={stateValue}
+         name={"sample"}
          options={options}
-         onSelect={(value): void => {
+         onSelect={(selectedValue): void => {
            console.log(">>>>>");
-           setValue(value)
+           setValue(selectedValue)
         }} />
     </div>
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App value={"odino"} />, document.getElementById("root"));
