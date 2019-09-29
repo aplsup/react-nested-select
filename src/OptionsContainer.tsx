@@ -10,12 +10,14 @@ interface OptionsContainerProps {
     selectedValue?: string;
     onValueChange: (value: SelectOption) => void;
     onGoUp: () => void;
+    show: boolean;
 }
 
 export const OptionsContainer = (props: OptionsContainerProps): React.ReactElement => {
-    const { selectedValue, onValueChange, options, showGoUp } = props;
+    const { selectedValue, onValueChange, options, showGoUp, show } = props;
+    const style = styles.optionsContainer(show);
     return (
-        <div style={styles.optionsContainer}>
+        <div style={style}>
             {showGoUp && <div onClick={(): void => props.onGoUp()}>
                 {"..."}
             </div>}
