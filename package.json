@@ -48,9 +48,5 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "assemble": "~0.3.11",
-    "grunt": "~0.4.0",
-    "styles": "^0.2.1",
-    "utils": "^0.3.1"
   }
 }
