@@ -37,8 +37,19 @@ workflows:
     build_pipeline:
         jobs:
             - build
+            - unit_test:
+                requires:
+                    - build
 
 jobs:
     build:
         <<: *docker_defaults
         <<: *install_steps
+    unit_test:
+        <<: *docker_defaults
+        steps:
+            - *attach_workspace
+            - run:
+                name: Running unit tests
+                command: |
+                  yarn test
