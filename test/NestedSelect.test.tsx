@@ -33,8 +33,9 @@ describe("<NestedSelect/> suite", () => {
     });
 
     it("renders the selected input value", () => {
-        const { getByDisplayValue } = render(<NestedSelect value={"selection"} name={"testInput"} onSelect={mockOnSelect} options={options} />);
-        expect(getByDisplayValue("selection")).toContainHTML("input");
+        const selectedValue = "blackwidow"
+        const { getByText } = render(<NestedSelect value={selectedValue} name={"testInput"} onSelect={mockOnSelect} options={options} />);
+        expect(getByText("Black Widow")).toBeInTheDocument();
     });
 
     it("renders the the options at the value level", () => {

@@ -23,7 +23,7 @@
     "start": "tsdx watch",
     "build": "rollup -c",
     "clean": "rm -rf ./dist/*",
-    "test": "tsdx test --env=jsdom",
+    "test": "jest --env=jsdom",
     "lint": "eslint src/*"
   },
   "peerDependencies": {
@@ -50,6 +50,7 @@
     "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.4.0",
     "eslint-plugin-react": "^7.14.3",
+    "jest": "^24.9.0",
     "marked": "^0.7.0",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
@@ -62,6 +63,7 @@
     "rollup-plugin-terser": "^5.1.2",
     "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-typescript2": "^0.24.3",
+    "ts-jest": "^24.1.0",
     "tslib": "^1.10.0",
     "typescript": "^3.6.3"
   },
