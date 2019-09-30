@@ -1,3 +1,3 @@
 # react-nested-select
 
-A multi-level select with built with simplicity in mind.
+A multi-level select built with simplicity in mind.
