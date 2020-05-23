@@ -13,12 +13,10 @@ module.exports = {
     },
     rules: {
         quotes: [2, "double", { "avoidEscape": true }]
-        // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
-        // e.g. "@typescript-eslint/explicit-function-return-type": "off",
     },
     overrides: [{
         files: ["src/*"],
-        excludedFiles: ["node_modules", "dist", "rollup.config.js"]
+        excludedFiles: ["node_modules", "dist", "rollup.config.js", "watch.js"]
     }],
     settings: {
         react: {

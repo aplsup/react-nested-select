@@ -1,71 +1,65 @@
 {
-  "name": "react-nested-select",
-  "version": "0.1.0",
-  "main": "dist/index.js",
-  "module": "dist/react-nested-select.esm.js",
-  "typings": "dist/index.d.ts",
-  "description": "A multi-level React select with zero dependencies",
-  "author": "aplusp <ale.paciello@gmail.com>",
-  "license": "MIT",
-  "keywords": [
-    "react",
-    "combobox",
-    "form",
-    "nested",
-    "input",
-    "react-component",
-    "select"
-  ],
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "start": "tsdx watch",
-    "build": "rollup -c",
-    "clean": "rm -rf ./dist/*",
-    "test": "jest --env=jsdom",
-    "lint": "eslint src/*"
-  },
-  "peerDependencies": {
-    "react": ">=16"
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.6.0",
-    "@testing-library/jest-dom": "^4.1.0",
-    "@testing-library/react": "^9.2.0",
-    "@types/jest": "^24.0.18",
-    "@types/react": "^16.9.3",
-    "@types/react-dom": "^16.9.1",
-    "@typescript-eslint/eslint-plugin": "^2.3.1",
-    "@typescript-eslint/parser": "^2.0.0",
-    "eslint": "^6.4.0",
-    "eslint-plugin-react": "^7.14.3",
-    "jest": "^24.9.0",
-    "marked": "^0.7.0",
-    "react": "^16.10.0",
-    "react-dom": "^16.10.0",
-    "rollup": "^1.22.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-babel-minify": "^9.1.0",
-    "rollup-plugin-filesize": "^6.2.0",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.1.2",
-    "rollup-plugin-typescript": "^1.0.1",
-    "rollup-plugin-typescript2": "^0.24.3",
-    "ts-jest": "^24.1.0",
-    "tslib": "^1.10.0",
-    "typescript": "^3.6.3"
-  },
-  "dependencies": {}
+    "name": "react-nested-select",
+    "version": "0.1.0",
+    "description": "A multi-level React select with zero dependencies",
+    "author": "aplusp <ale.paciello@gmail.com>",
+    "license": "MIT",
+    "keywords": [
+        "react",
+        "combobox",
+        "form",
+        "nested",
+        "input",
+        "react-component",
+        "select"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:aplsup/react-nested-select.git"
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "start": "node watch.js",
+        "build": "rollup -c",
+        "clean": "rm -rf ./dist/*",
+        "test": "jest --env=jsdom",
+        "lint": "eslint src/*"
+    },
+    "peerDependencies": {
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0"
+    },
+    "prettier": {
+        "printWidth": 80,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "es5"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.6.2",
+        "@babel/core": "^7.6.2",
+        "@babel/preset-env": "^7.6.2",
+        "@babel/preset-react": "^7.0.0",
+        "@babel/preset-typescript": "^7.6.0",
+        "@rollup/plugin-typescript": "^4.1.2",
+        "@testing-library/react": "^10.0.4",
+        "@types/jest": "^24.0.18",
+        "@types/react": "^16.9.3",
+        "@types/react-dom": "^16.9.1",
+        "@typescript-eslint/eslint-plugin": "^2.3.1",
+        "@typescript-eslint/parser": "^2.0.0",
+        "eslint": "^6.4.0",
+        "eslint-plugin-react": "^7.14.3",
+        "jest": "^26.0.1",
+        "marked": "^0.7.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "rollup": "^2.10.8",
+        "ts-jest": "^26.0.0",
+        "tslib": "^1.10.0",
+        "typescript": "^3.8.3"
+    },
+    "dependencies": {}
 }

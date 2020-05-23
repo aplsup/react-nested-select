@@ -4,6 +4,19 @@ interface SelectOption {
     children?: SelectOption[];
 }
 
-type OnChangeHandler = (value: string) => void;
+type OnSelect = (value: string) => void;
 
-export { SelectOption, OnChangeHandler }
+interface NestedSelectProps {
+    options: SelectOption[];
+    value?: string;
+    onSelect: OnSelect;
+    name: string;
+}
+
+interface NestedSelectState {
+    currentOptions: SelectOption[];
+    level: number;
+    showOptions: boolean;
+}
+
+export { SelectOption, OnSelect, NestedSelectProps, NestedSelectState }

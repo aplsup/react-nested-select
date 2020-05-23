@@ -1,6 +1,7 @@
 import * as React from "react"
 import { SelectOption } from "./types";
 import { listItem } from "./styles";
+import SvgArrow from "./shapes/SvgArrow";
 
 export interface OptionProps {
     onSelect: (event: React.SyntheticEvent) => void;
@@ -9,12 +10,13 @@ export interface OptionProps {
     isLeaf?: boolean;
 }
 
-export const NestedSelectItem = ({ isLeaf, onSelect, option, isSelected = false }: OptionProps): React.ReactElement => {
+export const NestedSelectItem = ({ isLeaf, onSelect, option }: OptionProps): React.ReactElement => {
     return isLeaf ?
         <div onClick={onSelect} style={listItem}>
-            {option.label} {isSelected ? "*" : ""}
+            {option.label}
         </div> :
         <div onClick={onSelect} style={listItem}>
-            {option.label} {" >"}
+            <div>{option.label} </div>
+            <SvgArrow />
         </div>;
 }

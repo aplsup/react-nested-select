@@ -1,23 +1,11 @@
 import * as React from "react";
-import { SelectOption, OnChangeHandler } from "./types";
+import {SelectOption, NestedSelectProps, NestedSelectState} from "./types";
 import { OptionsContainer } from "./OptionsContainer";
 import { isLeafElement, findLevel, findLevelBySelectedValue, InitialLevel } from "./utils";
 import { Select } from "./Select";
 
-export interface NestedSelectProps {
-    options: SelectOption[];
-    value?: string;
-    onSelect: OnChangeHandler;
-    name: string;
-}
 
-export interface NestedSelectState {
-    currentOptions: SelectOption[];
-    level: number;
-    showOptions: boolean;
-}
-
-export const NestedSelect = ({ options, value, onSelect, name }: NestedSelectProps): React.ReactElement => {
+export default ({ options, value, onSelect, name }: NestedSelectProps): React.ReactElement => {
 
     const initialLevel: InitialLevel = value ? findLevelBySelectedValue(options, value) :
         { options, level: 0, selectedOption: null };
